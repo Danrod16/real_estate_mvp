@@ -3,7 +3,6 @@
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
-    <%= render "devise/shared/error_messages" %>
 
   <%= f.text_field :first_name, required: true, autofocus: true, class: "form-control", placeholder: "First Name" %>
 
@@ -39,6 +38,7 @@
   <% end %>
 
   <%= render "devise/shared/links" %>
+  <%= render "devise/shared/error_messages" %>
 
 
 </section>
