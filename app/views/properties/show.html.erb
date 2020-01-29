@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<%= cl_image_tag @property.photo.key, height: 300, width: 400, crop: :fill %>
 <p>
   <strong>Name:</strong>
   <%= @property.name %>
