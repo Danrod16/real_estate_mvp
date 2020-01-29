@@ -16,6 +16,10 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 
+# added manually
+gem 'carrierwave', '~> 2.0'
+# end
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
