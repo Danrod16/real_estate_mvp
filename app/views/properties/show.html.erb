@@ -1,16 +1,17 @@
 <p id="notice"><%= notice %></p>
-
-<%= cl_image_tag @property.photo.key, height: 300, width: 400, crop: :fill %>
+  <div class="banner" style="background-image: url('<%= cl_image_path @property.photo.key %>')">
+  </div>
 <p>
-  <strong>Name:</strong>
-  <%= @property.name %>
+  <div class="container">
+<%= link_to 'Back to list', properties_path %>
+  <h1><%= @property.name %></h1>
 </p>
-
+<h2>Address</h2>
 <p>
   <strong>Address:</strong>
   <%= @property.address %>
 </p>
-
+<h2>Property Features</h2>
 <p>
   <strong>Price:</strong>
   <%= @property.price %>
@@ -25,4 +26,5 @@
   <strong>Bathrooms:</strong>
   <%= @property.bathrooms %>
 </p>
-<%= link_to 'Back', properties_path %>
+
+  </div>

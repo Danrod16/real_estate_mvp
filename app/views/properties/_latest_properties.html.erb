@@ -1,0 +1,16 @@
+<div class="layout-grid">
+<% @properties.each do |property| %>
+  <%= link_to property_path(property[:id]) do %>
+    <div class="card-flat">
+        <%= cl_image_tag property.photo.key, height: 250, width: 300, crop: :fill %>
+      <div class="card-flat-infos">
+        <div>
+          <h2><%= property.name %></h2>
+          <p><%= property.address %></p>
+        </div>
+        <h2 class="card-flat-pricing">Rooms: <%= property.rooms %></h2>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+</div>

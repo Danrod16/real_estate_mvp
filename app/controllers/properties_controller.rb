@@ -1,6 +1,7 @@
 class PropertiesController < ApplicationController
   before_action :set_property, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :create, :destroy]
+  before_action :set_sidebar, except: [:show]
   # GET /properties
   # GET /properties.json
   def index
@@ -70,5 +71,9 @@ class PropertiesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def property_params
       params.require(:property).permit(:name, :address, :price, :rooms, :bathrooms, :photo, :photo_cache)
+    end
+
+    def set_sidebar
+      true
     end
 end
