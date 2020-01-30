@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :profiles
+  get '/users' => 'admin#users', as: :users
   get '/dashboard' => 'dashboard#index', as: :dashboard
   get 'dashboard/properties'
   get 'dashboard/reports'
