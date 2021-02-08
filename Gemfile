@@ -17,7 +17,7 @@ gem 'uglifier'
 gem 'webpacker'
 
 # added manually
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 gem 'cloudinary'
 # end
 
